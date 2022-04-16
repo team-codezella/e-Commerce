@@ -17,8 +17,7 @@ namespace bulkey.DataAccess.Repository
         public Repository(ApplicationDbContext db )
         {
             _db = db;
-            //_db.products.Include(u => u.CategoryRepositery).ToList();
-            //_db.products.Include(u => u.CoverType).ToList();
+            //_db.ShoppingCarts.Include(u => u.Product).Include(u => u.CoverType);
             this.dbSet =_db.Set<T>();
         }
         public void Add(T entity)
@@ -27,10 +26,15 @@ namespace bulkey.DataAccess.Repository
             dbSet.Add(entity); 
         }
 
-        public IEnumerable<T> GetAll( string? includeProperties = null)
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter=null, string? includeProperties = null)
         {
            IQueryable<T> query = dbSet;
-            if(includeProperties != null)
+            if(filter != null)
+            {
+                query = query.Where(filter);
+            }
+           
+            if (includeProperties != null)
             {
                 foreach(var property in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
                 {
@@ -40,10 +44,10 @@ namespace bulkey.DataAccess.Repository
             return query.ToList();
         }
 
-        public T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null)
+        public T GetFirstOrDefault(Expression<Func<T, bool>>filter , string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
-
+            query = query.Where(filter);
             if (includeProperties != null)
             {
                 foreach (var property in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))

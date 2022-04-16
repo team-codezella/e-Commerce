@@ -48,6 +48,7 @@ namespace bulkey.Areas.Identity.Pages.Account
             RoleManager<IdentityRole>roleManager,
             IUnitOfWork unitOfWork)
         {
+            _unitOfWork = unitOfWork;
             _roleManager = roleManager;
             _userManager = userManager;
             _userStore = userStore;
@@ -128,7 +129,7 @@ namespace bulkey.Areas.Identity.Pages.Account
 
             [ValidateNever]
 
-            public IEnumerable<SelectListItem> CompanyList { get; set; }
+            public IEnumerable<SelectListItem> CompanList { get; set; }
         }
 
 
@@ -148,11 +149,11 @@ namespace bulkey.Areas.Identity.Pages.Account
                     Text = i,
                     Value = i
                 }),
-                //CompanyList = _unitOfWork.Compan.GetAll().Select(i => new SelectListItem
-                //{
-                //    Text = i.Name,
-                //    Value = i.Id.ToString(),
-                //})
+                CompanList = _unitOfWork.Compan.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString(),
+                })
 
             };
         
@@ -177,7 +178,7 @@ namespace bulkey.Areas.Identity.Pages.Account
                 if (Input.Role == SD.Role_User_Comp)
                 {
 
-                    user.CompanyId= Input.CompanyId;
+                    user.CompanId= Input.CompanyId;
                 }
                 var result = await _userManager.CreateAsync(user, Input.Password);
 

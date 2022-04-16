@@ -26,7 +26,6 @@ C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Utility\bin\Debug\net6.0\bulke
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Utility\bin\Debug\net6.0\bulkey.Utility.dll
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Utility\bin\Debug\net6.0\ref\bulkey.Utility.dll
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Utility\bin\Debug\net6.0\bulkey.Utility.pdb
-C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Utility\obj\Debug\net6.0\bulkey.Utility.csproj.AssemblyReference.cache
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Utility\obj\Debug\net6.0\bulkey.Utility.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Utility\obj\Debug\net6.0\bulkey.Utility.AssemblyInfoInputs.cache
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Utility\obj\Debug\net6.0\bulkey.Utility.AssemblyInfo.cs
@@ -34,3 +33,4 @@ C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Utility\obj\Debug\net6.0\bulke
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Utility\obj\Debug\net6.0\bulkey.Utility.dll
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Utility\obj\Debug\net6.0\ref\bulkey.Utility.dll
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Utility\obj\Debug\net6.0\bulkey.Utility.pdb
+C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Utility\obj\Debug\net6.0\bulkey.Utility.csproj.AssemblyReference.cache

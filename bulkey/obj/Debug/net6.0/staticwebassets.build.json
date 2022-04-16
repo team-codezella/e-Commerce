@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nNAptIfg2peLIrjvQSMD3Ll5ikmt4BvSod63u0Jf/Gg=",
+  "Hash": "x6cfGhk6Os0LiAH3vKjmBTp6g3hnD+fCakzH5O7vMbQ=",
   "Source": "bulkey",
   "BasePath": "_content/bulkey",
   "Mode": "Default",
@@ -1139,6 +1139,23 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\1194a1e3-a38c-4969-90be-2d247709f52f.jpg"
     },
     {
+      "Identity": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\images\\products\\13c3b84d-5d8f-4bc8-acf1-7e55e52289c0.jpg",
+      "SourceId": "bulkey",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\",
+      "BasePath": "_content/bulkey",
+      "RelativePath": "images/products/13c3b84d-5d8f-4bc8-acf1-7e55e52289c0.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\13c3b84d-5d8f-4bc8-acf1-7e55e52289c0.jpg"
+    },
+    {
       "Identity": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\images\\products\\177ad80f-1a88-4c12-906d-ee0021342698.jpg",
       "SourceId": "bulkey",
       "SourceType": "Discovered",
@@ -1154,6 +1171,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\177ad80f-1a88-4c12-906d-ee0021342698.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\images\\products\\1cb92404-fd69-41ec-95a7-7200b5c1b26b.jpg",
+      "SourceId": "bulkey",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\",
+      "BasePath": "_content/bulkey",
+      "RelativePath": "images/products/1cb92404-fd69-41ec-95a7-7200b5c1b26b.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\1cb92404-fd69-41ec-95a7-7200b5c1b26b.jpg"
     },
     {
       "Identity": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\images\\products\\306304b6-eaa1-4552-ae9a-ad5e06f3259f.jpg",
@@ -1292,6 +1326,23 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\67043613-6edf-411b-9d80-8be449fecd82.jpg"
     },
     {
+      "Identity": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\images\\products\\79b24346-a999-4f14-b246-db383a91f0bd.jpg",
+      "SourceId": "bulkey",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\",
+      "BasePath": "_content/bulkey",
+      "RelativePath": "images/products/79b24346-a999-4f14-b246-db383a91f0bd.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\79b24346-a999-4f14-b246-db383a91f0bd.jpg"
+    },
+    {
       "Identity": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\images\\products\\84e267a7-c9e0-4c5e-abdd-ef2935abefd5.jpg",
       "SourceId": "bulkey",
       "SourceType": "Discovered",
@@ -1343,6 +1394,23 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\99089c2b-f5c5-429c-8242-02352d44de91.jpg"
     },
     {
+      "Identity": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\images\\products\\a6555b37-89b4-47b2-9eae-95d0ecee81a1.jpg",
+      "SourceId": "bulkey",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\",
+      "BasePath": "_content/bulkey",
+      "RelativePath": "images/products/a6555b37-89b4-47b2-9eae-95d0ecee81a1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\a6555b37-89b4-47b2-9eae-95d0ecee81a1.jpg"
+    },
+    {
       "Identity": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\images\\products\\a835796d-5a91-4fc4-a34d-5fcf294f5330.jpg",
       "SourceId": "bulkey",
       "SourceType": "Discovered",
@@ -1392,6 +1460,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\e5b80b3b-c90f-4eb9-86fe-ac71553b5743.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\images\\products\\ed9ced96-2b7a-41bc-984d-3379d8436c81.jpg",
+      "SourceId": "bulkey",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\",
+      "BasePath": "_content/bulkey",
+      "RelativePath": "images/products/ed9ced96-2b7a-41bc-984d-3379d8436c81.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\ed9ced96-2b7a-41bc-984d-3379d8436c81.jpg"
     },
     {
       "Identity": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\images\\products\\fdcd39f8-c401-4e73-9492-65c3c0268ea5.jpg",

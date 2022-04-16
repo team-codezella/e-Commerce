@@ -6,7 +6,9 @@ using bulkey.Utility;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
+
 using Microsoft.Extensions.DependencyInjection;
+using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(Options =>
 {
     Options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddDefaultTokenProviders()
     //(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -27,12 +30,12 @@ builder.Services.AddSingleton<IEmailSender,EmailSender>();
 
 //builder.Services.AddScoped<IDbInitializer,DbInitializerRepo>();
 //builder.Services.AddScoped<IEmailSender, EmailSender>();
-//builder.Services.ConfigureApplicationCookie(options =>
-//{
-//    options.AccessDeniedPath = $"/Identity/Account/Login";
-//    options.LoginPath = $"/Identity/Account/Login";
-//    options.LogoutPath = $"/Identity/Account/Logout";
-//});
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.AccessDeniedPath = $"/Identity/Account/Login";
+    options.LoginPath = $"/Identity/Account/Login";
+    options.LogoutPath = $"/Identity/Account/Logout";
+});
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
@@ -49,6 +52,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 //dataSedding();
 app.UseAuthentication();
 app.UseAuthorization();

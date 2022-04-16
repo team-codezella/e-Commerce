@@ -13,6 +13,10 @@ public interface IUnitOfWork
         ICoverTypeRepository CoverType { get; }
         IProductRepository Product { get; }
         ICompanRepository Compan { get; }
+        IApplicationUserRepository ApplicationUser { get; } 
+        IShoppingCartRepository ShoppingCart { get; }
+        IOrderDetailRepository OrderDetail { get; }
+        IOrderHeaderRepository OrderHeader { get; }
         void Save();
     }
 }

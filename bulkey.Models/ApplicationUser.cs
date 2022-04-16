@@ -19,10 +19,10 @@ namespace bulkey.Models
         public string? City { get; set; }
         public string? State { get; set; }
         public string? PostalCode { get; set; }
-        public int? CompanyId { get; set; }
-        [ForeignKey("CompanyId")]
+        public int? CompanId { get; set; }
+        [ForeignKey("CompanId")]
         [ValidateNever]
-        public Compan Company { get; set; }
+        public Compan Compan { get; set; }
 
     }
 }

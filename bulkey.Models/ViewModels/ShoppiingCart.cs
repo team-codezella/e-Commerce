@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace bulkey.Models
+namespace bulkey.Models.ViewModels
 {
    public class ShoppingCart
     {
@@ -25,5 +25,8 @@ namespace bulkey.Models
         [ForeignKey("ApplicationUserId")]
         [ValidateNever]
         public ApplicationUser ApplicationUser{ get; set; }
+
+        [NotMapped]
+        public double Price { get; set; }
     }
 }

@@ -68,7 +68,7 @@
                 </select>
             </div>
             <div class="form-floating py-2 col-6">
-                <select asp-for="Input.CompanyId" asp-Items="@Model.Input.CompanyList">
+                <select asp-for="Input.CompanyId" asp-Items="@Model.Input.CompanList">
                     <option disabled selected >--selecte company--</option>
                 </select>
             </div>
@@ -113,20 +113,20 @@
     <partial name="_ValidationScriptsPartial" />
     <script>
     
-    $(document).ready(function(){
-        $('#Input_Role').change(function(){
+    //$(document).ready(function(){
+    //    $('#Input_Role').change(function(){
 
-            var selection=$('#input_Role option:Selected').text();
-            if(selection!='Company'){
-                $('#Input_CompanyId').hide();
-            }
-            else{
-                 $('#Input_CompanyId').show();
-            }
-        })
+    //        var selection=$('#input_Role option:Selected').text();
+    //        if(selection!='Company'){
+    //            $('#Input_CompanyId').hide();
+    //        }
+    //        else{
+    //             $('#Input_CompanyId').show();
+    //        }
+    //    })
 
 
-    })
+    //})
     
     </script>
 
