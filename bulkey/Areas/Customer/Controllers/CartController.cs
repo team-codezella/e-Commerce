@@ -180,7 +180,7 @@ namespace bulkey.Areas.Customer.Controllers
             _unitOfWork.ShoppingCart.RemoveRange(shoppingCarts);
             _unitOfWork.Save();
 
-            return RedirectToAction("Index", "Home");
+            return View(id);
         }
         public IActionResult Plus(int cartId)
         {
