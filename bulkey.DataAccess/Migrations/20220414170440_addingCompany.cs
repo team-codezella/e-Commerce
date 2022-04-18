@@ -222,15 +222,15 @@ namespace bulkey.DataAccess.Migrations
                     Price50 = table.Column<double>(type: "float", nullable: false),
                     Price100 = table.Column<double>(type: "float", nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CategoryRepositeryId = table.Column<int>(type: "int", nullable: false),
+                    CategoryId = table.Column<int>(type: "int", nullable: false),
                     CoverTypeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_products", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_products_Categories_CategoryRepositeryId",
-                        column: x => x.CategoryRepositeryId,
+                        name: "FK_products_Categories_CategoryId",
+                        column: x => x.CategoryId,
                         principalTable: "Categories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -282,9 +282,9 @@ namespace bulkey.DataAccess.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_products_CategoryRepositeryId",
+                name: "IX_products_CategoryId",
                 table: "products",
-                column: "CategoryRepositeryId");
+                column: "CategoryId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_products_CoverTypeId",

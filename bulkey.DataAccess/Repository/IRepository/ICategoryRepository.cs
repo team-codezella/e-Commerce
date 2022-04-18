@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace bulkey.DataAccess.Repository.IRepository
 {
- public interface ICategoryRepository:IRepository<CategoryRepositery>
+ public interface ICategoryRepository:IRepository<Category>
     {
 
-        void Update (CategoryRepositery obj);
+        void Update (Category obj);
  
     }
 }

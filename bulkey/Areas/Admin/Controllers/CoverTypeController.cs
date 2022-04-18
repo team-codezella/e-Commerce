@@ -3,11 +3,14 @@ using bulkey.DataAccess;
 using bulkey.DataAccess.Repository;
 using bulkey.DataAccess.Repository.IRepository;
 using bulkey.Models;
+using bulkey.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace bulkey.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_User_Admin)]
     public class CoverTypeController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

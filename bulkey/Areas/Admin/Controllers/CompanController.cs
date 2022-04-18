@@ -4,12 +4,16 @@ using bulkey.DataAccess.Repository;
 using bulkey.DataAccess.Repository.IRepository;
 using bulkey.Models;
 using bulkey.Models.ViewModels;
+using bulkey.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace bulkey.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_User_Admin)]
+
     public class    CompanController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -65,12 +69,12 @@ namespace bulkey.Controllers
                 if (obj.Id == 0)
                 {
                     _unitOfWork.Compan.Add(obj);
-                    TempData["success"] = "Product created successfully";
+                    TempData["success"] = "company created successfully";
                 }
                 else
                 {
                     _unitOfWork.Compan.Update(obj);
-                    TempData["success"] = "Product created successfully";
+                    TempData["success"] = "comany updated successfully";
                 }
                 _unitOfWork.Save();
              

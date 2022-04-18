@@ -1,4 +1,5 @@
 ﻿using bulkey.Models;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System;
 using System.Collections.Generic;
@@ -12,19 +13,21 @@ namespace bulkey.Models.ViewModels
 {
    public class ShoppingCart
     {
-        [Key]
-        public int Id { get; set; } 
-        public int  ProductId { get; set; }
 
-        [ForeignKey("ProductId")]
+        [BindNever]
+        public int Id { get; set; }
+
+        public int ProductId { get; set; }
+        
         [ValidateNever]
         public Product Product { get; set; }
-        [Range(1,1000,ErrorMessage="range between 1 and 1000")]
+        [Range(1, 1000, ErrorMessage = "Please enter a value between 1 and 1000")]
         public int Count { get; set; }
+
         public string ApplicationUserId { get; set; }
         [ForeignKey("ApplicationUserId")]
         [ValidateNever]
-        public ApplicationUser ApplicationUser{ get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
 
         [NotMapped]
         public double Price { get; set; }

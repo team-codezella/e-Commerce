@@ -24,7 +24,7 @@ namespace bulkey.DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("bulkey.Models.CategoryRepositery", b =>
+            modelBuilder.Entity("bulkey.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -109,7 +109,7 @@ namespace bulkey.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CategoryRepositeryId")
+                    b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<int>("CoverTypeId")
@@ -142,7 +142,7 @@ namespace bulkey.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryRepositeryId");
+                    b.HasIndex("CategoryId");
 
                     b.HasIndex("CoverTypeId");
 
@@ -413,9 +413,9 @@ namespace bulkey.DataAccess.Migrations
 
             modelBuilder.Entity("bulkey.Models.Product", b =>
                 {
-                    b.HasOne("bulkey.Models.CategoryRepositery", "CategoryRepositery")
+                    b.HasOne("bulkey.Models.Category", "Category")
                         .WithMany()
-                        .HasForeignKey("CategoryRepositeryId")
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -425,7 +425,7 @@ namespace bulkey.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("CategoryRepositery");
+                    b.Navigation("Category");
 
                     b.Navigation("CoverType");
                 });

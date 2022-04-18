@@ -45,7 +45,7 @@ namespace bulkey.Areas.Identity.Pages.Account
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender,
-            RoleManager<IdentityRole>roleManager,
+            RoleManager<IdentityRole> roleManager,
             IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -118,27 +118,17 @@ namespace bulkey.Areas.Identity.Pages.Account
             public string? State { get; set; }
             public string? PostalCode { get; set; }
             public string? PhoneNumber { get; set; }
-            public string Role { get; set; }
+            public string? Role { get; set; }
             public int? CompanyId { get; set; }
-
             [ValidateNever]
-
             public IEnumerable<SelectListItem> RoleList { get; set; }
-
-
-
             [ValidateNever]
-
-            public IEnumerable<SelectListItem> CompanList { get; set; }
+            public IEnumerable<SelectListItem> CompanyList { get; set; }
         }
 
 
         public async Task OnGetAsync(string returnUrl = null)
-        {  if(!_roleManager.RoleExistsAsync(SD.Role_User_Admin).GetAwaiter().GetResult())
-            _roleManager.CreateAsync(new IdentityRole(SD.Role_User_Admin)).GetAwaiter().GetResult();
-            _roleManager.CreateAsync(new IdentityRole(SD.Role_User_Employee)).GetAwaiter().GetResult();
-            _roleManager.CreateAsync(new IdentityRole(SD.Role_User_Comp)).GetAwaiter().GetResult();
-            _roleManager.CreateAsync(new IdentityRole(SD.Role_User_Indi)).GetAwaiter().GetResult();
+        {
 
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -149,14 +139,12 @@ namespace bulkey.Areas.Identity.Pages.Account
                     Text = i,
                     Value = i
                 }),
-                CompanList = _unitOfWork.Compan.GetAll().Select(i => new SelectListItem
+                CompanyList = _unitOfWork.Compan.GetAll().Select(i => new SelectListItem
                 {
                     Text = i.Name,
-                    Value = i.Id.ToString(),
-                })
-
+                    Value = i.Id.ToString()
+                }),
             };
-        
         }
 
         public async Task<IActionResult> OnPostAsync(string? returnUrl = null)
@@ -169,29 +157,29 @@ namespace bulkey.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                user.City= Input.City;
-                user.State= Input.State;
-                user.PhoneNumber= Input.PhoneNumber;
-                user.Name= Input.Name;
-                user.PostalCode= Input.PostalCode;
-                user.StreetAddress= Input.StreetAddress;
+                user.StreetAddress = Input.StreetAddress;
+                user.City = Input.City;
+                user.State = Input.State;
+                user.PostalCode = Input.PostalCode;
+                user.Name = Input.Name;
+                user.PhoneNumber = Input.PhoneNumber;
                 if (Input.Role == SD.Role_User_Comp)
                 {
-
-                    user.CompanId= Input.CompanyId;
+                    user.CompanId = Input.CompanyId;
                 }
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-                    if(Input.Role == null)
+
+                    if (Input.Role == null)
                     {
                         await _userManager.AddToRoleAsync(user, SD.Role_User_Indi);
                     }
                     else
                     {
-                        await _userManager.AddToRoleAsync(user,Input.Role);
+                        await _userManager.AddToRoleAsync(user, Input.Role);
                     }
 
                     var userId = await _userManager.GetUserIdAsync(user);
@@ -212,7 +200,15 @@ namespace bulkey.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
+                        if (User.IsInRole(SD.Role_User_Admin))
+                        {
+                            TempData["success"] = "New User Created Successfully";
+                        }
+                        else
+                        {
+                            await _signInManager.SignInAsync(user, isPersistent: false);
+
+                        }
                         return LocalRedirect(returnUrl);
                     }
                 }

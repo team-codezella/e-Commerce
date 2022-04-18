@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace bulkey.DataAccess.Repository
 {
-    public class CategoryRepository : Repository<CategoryRepositery>, ICategoryRepository
+    public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
         private ApplicationDbContext _db;
         public CategoryRepository(ApplicationDbContext db):base(db) 
@@ -21,7 +21,7 @@ namespace bulkey.DataAccess.Repository
             _db.SaveChanges();
         }
 
-        public void Update(CategoryRepositery obj)
+        public void Update(Category obj)
         {
             _db.Categories.Update(obj);
         }

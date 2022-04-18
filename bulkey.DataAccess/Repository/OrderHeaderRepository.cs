@@ -37,9 +37,10 @@ namespace bulkey.DataAccess.Repository
             }
         }
 
-        public void UpdateStripePayment(int id, string sessionId, string paymentIntentId  )
+        public void UpdateStripePaymentId(int id, string sessionId, string paymentIntentId  )
         {
             var orderFromDb = _db.OrderHeaders.FirstOrDefault(x => x.Id == id);
+            orderFromDb.PaymentDate = DateTime.Now;
             orderFromDb.SessionId = sessionId;
             orderFromDb.PaymentIntentId = paymentIntentId;
 

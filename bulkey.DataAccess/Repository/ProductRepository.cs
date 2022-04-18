@@ -31,7 +31,7 @@ namespace bulkey.DataAccess.Repository
                 objFromDb.Author=obj.Author;
                 objFromDb.Price100=obj.Price100;
                 objFromDb.Price50=obj.Price50;
-                objFromDb.CategoryRepositeryId=obj.CategoryRepositeryId;
+                objFromDb.Category=obj.Category;
                 objFromDb.ListPrice= obj.ListPrice;
                
                 objFromDb.Title=obj.Title;

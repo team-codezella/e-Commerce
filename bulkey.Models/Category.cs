@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace bulkey.Models
 {
-    public class CategoryRepositery
+    public class Category
     {
         [Key]
         public int Id { get; set; }

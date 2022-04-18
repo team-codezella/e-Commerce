@@ -4,12 +4,15 @@ using bulkey.DataAccess.Repository;
 using bulkey.DataAccess.Repository.IRepository;
 using bulkey.Models;
 using bulkey.Models.ViewModels;
+using bulkey.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace bulkey.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_User_Admin)]
     public class    ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -97,14 +100,18 @@ namespace bulkey.Controllers
                 if (obj.Product.Id == 0)
                 {
                     _unitOfWork.Product.Add(obj.Product);
+                    _unitOfWork.Save();
+                    TempData["success"] = "Product created successfully";
+                    return RedirectToAction("Index");
                 }
                 else
                 {
                     _unitOfWork.Product.Update(obj.Product);
+                    _unitOfWork.Save();
+                    TempData["success"] = "Product updated successfully";
+                    return RedirectToAction("Index");
                 }
-                _unitOfWork.Save();
-                TempData["success"] = "Product created successfully";
-                return RedirectToAction("Index");
+               
             }
             return View(obj);
         }
@@ -119,7 +126,7 @@ namespace bulkey.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var productList=_unitOfWork.Product.GetAll(includeProperties:"CategoryRepositery,CoverType");
+            var productList=_unitOfWork.Product.GetAll(includeProperties:"Category,CoverType");
             return Json(new {data=productList});
         }
 

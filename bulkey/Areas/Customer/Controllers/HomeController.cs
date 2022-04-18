@@ -1,6 +1,7 @@
 ﻿using bulkey.DataAccess.Repository.IRepository;
 using bulkey.Models;
 using bulkey.Models.ViewModels;
+using bulkey.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -22,7 +23,7 @@ namespace bulkey.Controllers
         public IActionResult Index()
         {
 
-            IEnumerable<Product> productList=_unitOfWork.Product.GetAll(includeProperties: "CategoryRepositery,CoverType");
+            IEnumerable<Product> productList=_unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
             return View(productList);
         }
 
@@ -32,7 +33,7 @@ namespace bulkey.Controllers
             {
                 Count = 1,
                 ProductId = pruductId,
-                Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == pruductId, includeProperties: "CategoryRepositery,CoverType")
+                Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == pruductId, includeProperties: "Category,CoverType")
 
         };   
             return View(cartObj);
@@ -42,30 +43,34 @@ namespace bulkey.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public IActionResult Details(ShoppingCart shoppingCart)
+        public async Task<IActionResult> DetailsAsync(ShoppingCart shoppingCart)
         {
-
-            var claimsIdentity=(ClaimsIdentity)User.Identity;
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
-            shoppingCart.ApplicationUserId =claim.Value;
+            shoppingCart.ApplicationUserId = claim.Value;
+
             ShoppingCart cartFromDb = _unitOfWork.ShoppingCart.GetFirstOrDefault(
-                u=>u.ApplicationUserId==claim.Value && u.ProductId==shoppingCart.ProductId);
+                u => u.ApplicationUserId == claim.Value && u.ProductId == shoppingCart.ProductId);
+
+
             if (cartFromDb == null)
             {
 
-
                 _unitOfWork.ShoppingCart.Add(shoppingCart);
+               
                 _unitOfWork.Save();
+                HttpContext.Session.SetInt32(SD.SessionCart,
+                    _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == claim.Value).ToList().Count);
             }
             else
             {
-
-                _unitOfWork.ShoppingCart.IncrementCount(cartFromDb,shoppingCart.Count);
+                _unitOfWork.ShoppingCart.IncrementCount(cartFromDb, shoppingCart.Count);
                 _unitOfWork.Save();
             }
+
+
             return RedirectToAction(nameof(Index));
         }
-
 
 
         public IActionResult Privacy()

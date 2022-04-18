@@ -4,7 +4,7 @@
 
 
 <form method="post">
-    <input hidden asp-for="Product.Id" />
+    <input hidden asp-for="ProductId" />
         <div class="card  container pt-4">
             <div class="card-header bg-primary text-light ml-0  row ">
                 <div class="col-12 col-md-6">
@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-12 col-md-6 text-end pt-4">
                     <span class="badge bg-info pt-2" style="height:30px;">@Model.Product.CoverType.Name</span>
-                    <span class="badge bg-warning pt-2" style="height:30px;">@Model.Product.CategoryRepositery.Name</span>
+                    <span class="badge bg-warning pt-2" style="height:30px;">@Model.Product.Category.Name</span>
                 </div>
             </div>
             <div class="card-body row container">

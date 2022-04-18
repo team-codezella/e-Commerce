@@ -2,9 +2,13 @@
 
 $(document).ready(function () {
     loadDataTable();
+    paging: false
 });
 
 function loadDataTable() {
+
+    destroy: true,
+     searching: false
     dataTable = $('#tblData').DataTable({
         "ajax": {
             "url": "/Admin/Compan/GetAll"
@@ -14,7 +18,6 @@ function loadDataTable() {
             { "data": "streetAddress", "width": "15%" },
             { "data": "city", "width": "15%" },
             { "data": "state", "width": "15%" },
-            { "data": "postalCode", "width": "15%" },
             { "data": "phoneNumber", "width": "15%" },
             {
                 "data": "id",

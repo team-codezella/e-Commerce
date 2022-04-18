@@ -3,11 +3,14 @@ using bulkey.DataAccess;
 using bulkey.DataAccess.Repository;
 using bulkey.DataAccess.Repository.IRepository;
 using bulkey.Models;
+using bulkey.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace bulkey.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_User_Admin)]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -18,7 +21,7 @@ namespace bulkey.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<CategoryRepositery> objCategoryList = _unitOfWork.Category.GetAll();
+            IEnumerable<Category> objCategoryList = _unitOfWork.Category.GetAll();
             return View(objCategoryList);
         }
         public IActionResult Create()
@@ -30,7 +33,7 @@ namespace bulkey.Controllers
         //create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(CategoryRepositery obj)
+        public IActionResult Create(Category obj)
         {
             if(obj.Name == obj.DisplayOrder.ToString())
             {
@@ -65,7 +68,7 @@ namespace bulkey.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(CategoryRepositery obj)
+        public IActionResult Edit(Category obj)
         {
             if (obj.Name == obj.DisplayOrder.ToString())
             {
