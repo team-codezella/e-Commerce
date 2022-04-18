@@ -20,11 +20,28 @@ namespace bulkey.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        //public IActionResult Index()
+        //{
+
+        //    IEnumerable<Product> productList=_unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
+        //    return View(productList);
+        //}
+
+
+
+        public async Task<IActionResult> Index(string SearchString)
         {
 
-            IEnumerable<Product> productList=_unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
-            return View(productList);
+            ViewData["Filter"]=SearchString;
+            var products =from p in _unitOfWork.Product.GetAll() select p;
+            if (!String.IsNullOrEmpty(SearchString))
+            {
+                products = products.Where(p => p.Title.Contains(SearchString));
+            }
+            return View(products);
+
+            //IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
+            //return View(productList);
         }
 
         public IActionResult Details(int pruductId)
@@ -74,6 +91,16 @@ namespace bulkey.Controllers
 
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult ContactMail()
         {
             return View();
         }

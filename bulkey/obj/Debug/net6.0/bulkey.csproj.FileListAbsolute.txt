@@ -869,7 +869,6 @@ C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey\obj\Debug\net6.0\bulkey.RazorA
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey\obj\Debug\net6.0\bulkey.RazorAssemblyInfo.cs
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey\obj\Debug\net6.0\scopedcss\bundle\bulkey.styles.css
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey\obj\Debug\net6.0\scopedcss\projectbundle\bulkey.bundle.scp.css
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey\obj\Debug\net6.0\bulkey.csproj.CopyComplete
@@ -892,3 +891,5 @@ C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey\bin\Debug\net6.0\runtimes\win\
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey\bin\Debug\net6.0\MailKit.dll
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey\bin\Debug\net6.0\MimeKit.dll
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Facebook.dll

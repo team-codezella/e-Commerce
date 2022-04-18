@@ -30,6 +30,12 @@ builder.Services.AddSingleton<IEmailSender,EmailSender>();
 
 //builder.Services.AddScoped<IDbInitializer,DbInitializerRepo>();
 //builder.Services.AddScoped<IEmailSender, EmailSender>();
+
+builder.Services.AddAuthentication().AddFacebook(options =>
+{
+    options.AppId = "3254986594737473";
+    options.AppSecret = "9521b78177f52eeac9041bd6bb9f26dd";
+});
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.AccessDeniedPath = $"/Identity/Account/Login";

@@ -254,6 +254,21 @@ namespace bulkey.Areas.Customer.Controllers
                 return price100;
             }
         }
+
+
+        [HttpGet]
+        public IActionResult ContactMail()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ContactMail(Contact contact)
+        {
+            var msg = contact.Name + " " + contact.Message;
+            await _emailSender.SendEmailAsync(contact.Email, "Contact Mail", msg);
+            ViewBag.ConfirmMsg = "Thanks for your mail";
+            return View();
+        }
     }
 }
 
