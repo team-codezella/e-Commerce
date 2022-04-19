@@ -3980,7 +3980,8 @@
           "Microsoft.AspNetCore.Identity.UI": "6.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.4",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.3",
-          "bulkey.Models": "1.0.0"
+          "bulkey.Models": "1.0.0",
+          "bulkey.Utility": "1.0.0"
         },
         "compile": {
           "bin/placeholder/bulkey.DataAccess.dll": {}

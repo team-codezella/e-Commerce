@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Tu70NQr0aznITGrOTgS4vn9ToBVPty83jMAK9FzHTPo=",
+  "Hash": "LGnmavICa6+1shEnSmrCV/rP5TkHypsvZ8YMABQf1/A=",
   "Source": "bulkey",
   "BasePath": "_content/bulkey",
   "Mode": "Default",
@@ -1120,6 +1120,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\images\\asp.jpg",
+      "SourceId": "bulkey",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\",
+      "BasePath": "_content/bulkey",
+      "RelativePath": "images/asp.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\asp.jpg"
     },
     {
       "Identity": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey\\wwwroot\\images\\book.jpg",

@@ -47,7 +47,7 @@ namespace bulkey.Areas.Admin.Controllers
             OrderVM.OrderDetail = _unitOfWork.OrderDetail.GetAll(u => u.OrderId == OrderVM.OrderHeader.Id, includeProperties: "Product");
 
             //stripe settings 
-            var domain = "https://localhost:44300/";
+            var domain = "https://localhost:44359/";
             var options = new SessionCreateOptions
             {
                 PaymentMethodTypes = new List<string>
@@ -107,7 +107,7 @@ namespace bulkey.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = SD.Role_User_Admin + "," + SD.Role_User_Employee)]
+        [Authorize(Roles = SD.Role_User_Admin + "," + SD.Role_User_Employee + "," + SD.Role_User_Employee)]
         [ValidateAntiForgeryToken]
         public IActionResult UpdateOrderDetail()
         {

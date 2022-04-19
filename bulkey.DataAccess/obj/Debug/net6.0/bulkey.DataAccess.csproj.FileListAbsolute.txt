@@ -47,3 +47,5 @@ C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.DataAccess\obj\Debug\net6.0\bu
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.DataAccess\obj\Debug\net6.0\ref\bulkey.DataAccess.dll
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.DataAccess\obj\Debug\net6.0\bulkey.DataAccess.pdb
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.DataAccess\obj\Debug\net6.0\bulkey.DataAccess.genruntimeconfig.cache
+C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.DataAccess\bin\Debug\net6.0\bulkey.Utility.dll
+C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.DataAccess\bin\Debug\net6.0\bulkey.Utility.pdb

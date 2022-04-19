@@ -30,6 +30,9 @@
             "projectReferences": {
               "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey.Models\\bulkey.Models.csproj": {
                 "projectPath": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey.Models\\bulkey.Models.csproj"
+              },
+              "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey.Utility\\bulkey.Utility.csproj": {
+                "projectPath": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey.Utility\\bulkey.Utility.csproj"
               }
             }
           }

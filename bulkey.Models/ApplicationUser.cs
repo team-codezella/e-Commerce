@@ -21,7 +21,7 @@ namespace bulkey.Models
         public string? PostalCode { get; set; }
         public int? CompanId { get; set; }
         [ForeignKey("CompanId")]
-        //[ValidateNever]
+        [ValidateNever]
         public Compan Compan { get; set; }
 
     }

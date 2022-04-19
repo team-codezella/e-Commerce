@@ -37,3 +37,4 @@ C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Models\obj\Debug\net6.0\bulkey
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Models\obj\Debug\net6.0\ref\bulkey.Models.dll
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Models\obj\Debug\net6.0\bulkey.Models.pdb
 C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Models\obj\Debug\net6.0\bulkey.Models.genruntimeconfig.cache
+C:\Users\girsh\OneDrive\Desktop\adc\bulkey\bulkey.Models\obj\Debug\net6.0\bulkey.Models.csproj.AssemblyReference.cache

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\bulkey.Models\bulkey.Models.csproj" />
+    <ProjectReference Include="..\bulkey.Utility\bulkey.Utility.csproj" />
   </ItemGroup>
 
   <ItemGroup>

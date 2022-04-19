@@ -1,9 +1,11 @@
-﻿using bulkey.DataAccess.Repository.IRepository;
+﻿using bulkey.DataAccess;
+using bulkey.DataAccess.Repository.IRepository;
 using bulkey.Models;
 using bulkey.Models.ViewModels;
 using bulkey.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using System.Security.Claims;
 
@@ -13,35 +15,36 @@ namespace bulkey.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _db;
         private readonly IUnitOfWork _unitOfWork;
-        public HomeController(ILogger<HomeController> logger,IUnitOfWork unitOfWork)
+    
+        public HomeController(ILogger<HomeController> logger,IUnitOfWork unitOfWork, ApplicationDbContext db)
         {
             _unitOfWork = unitOfWork;
             _logger = logger;
+            _db = db;
         }
 
-        //public IActionResult Index()
-        //{
-
-        //    IEnumerable<Product> productList=_unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
-        //    return View(productList);
-        //}
-
-
-
-        public async Task<IActionResult> Index(string SearchString)
+        public IActionResult Index()
         {
 
-            ViewData["Filter"]=SearchString;
-            var products =from p in _unitOfWork.Product.GetAll() select p;
-            if (!String.IsNullOrEmpty(SearchString))
-            {
-                products = products.Where(p => p.Title.Contains(SearchString));
-            }
-            return View(products);
+            IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
+            return View(productList);
+        }
 
-            //IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
-            //return View(productList);
+
+
+        public async Task<IActionResult> Search(string searchString)
+        {
+            var products = from m in _db.products
+                           select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                products = products.Where(s => s.Title!.Contains(searchString));
+            }
+
+            return View(await products.ToListAsync());
         }
 
         public IActionResult Details(int pruductId)
