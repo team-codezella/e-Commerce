@@ -11256,19 +11256,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\girsh\\.nuget\\packages\\": {}
+    "C:\\Users\\BUGGER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey.DataAccess\\bulkey.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\BUGGER\\Desktop\\PROJECTS\\REPO\\e-commerce\\bulkey.DataAccess\\bulkey.DataAccess.csproj",
       "projectName": "bulkey.DataAccess",
-      "projectPath": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey.DataAccess\\bulkey.DataAccess.csproj",
-      "packagesPath": "C:\\Users\\girsh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey.DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\BUGGER\\Desktop\\PROJECTS\\REPO\\e-commerce\\bulkey.DataAccess\\bulkey.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\BUGGER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\BUGGER\\Desktop\\PROJECTS\\REPO\\e-commerce\\bulkey.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\girsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\BUGGER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11282,11 +11282,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey.Models\\bulkey.Models.csproj": {
-              "projectPath": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey.Models\\bulkey.Models.csproj"
+            "C:\\Users\\BUGGER\\Desktop\\PROJECTS\\REPO\\e-commerce\\bulkey.Models\\bulkey.Models.csproj": {
+              "projectPath": "C:\\Users\\BUGGER\\Desktop\\PROJECTS\\REPO\\e-commerce\\bulkey.Models\\bulkey.Models.csproj"
             },
-            "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey.Utility\\bulkey.Utility.csproj": {
-              "projectPath": "C:\\Users\\girsh\\OneDrive\\Desktop\\adc\\bulkey\\bulkey.Utility\\bulkey.Utility.csproj"
+            "C:\\Users\\BUGGER\\Desktop\\PROJECTS\\REPO\\e-commerce\\bulkey.Utility\\bulkey.Utility.csproj": {
+              "projectPath": "C:\\Users\\BUGGER\\Desktop\\PROJECTS\\REPO\\e-commerce\\bulkey.Utility\\bulkey.Utility.csproj"
             }
           }
         }
@@ -11345,7 +11345,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

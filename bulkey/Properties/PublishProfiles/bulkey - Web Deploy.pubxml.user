@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAgGa4G55SO0KDSZlIf84LDAAAAAACAAAAAAAQZgAAAAEAACAAAABIpLHsRLJ1QltoSLa4jdMLLfDx0df28S5Et+vImJujIwAAAAAOgAAAAAIAACAAAAAxZPRZTkmX9AAEIqJAji2siw15guAIRKw1Oo94qmgsh4AAAADuvxB8ijhwIPs8AsgAf8Fhq8mec6AMwjp1q4sD0/cZOsMtwQNzBL3JepgdRGv0H5DKWSYHKHeVojFPL1MCy9sV6olJyxJG5su96GtbHxD5cj2HQWPw7DeNZXK2yUUtcRo9i4JjIvDF5p2Ym17NMx9gVkwJRc2XQyN7V0WOTS3CxkAAAABMgNYoeEmUIPhQ+1CKCdcvtXsNzeK23S8yh/bhbgqG5OBYeZORxZ4LFt0oBdcgpfzg4BYJZm5Xue8//6zwWYSB</EncryptedPassword>
+    <History>True|2022-04-21T06:24:53.5398072Z;True|2022-04-21T08:14:42.0479823+02:00;True|2022-04-21T07:58:49.9060976+02:00;True|2022-04-21T07:54:16.3580651+02:00;True|2022-04-21T07:49:58.4622846+02:00;True|2022-04-21T07:39:10.4477336+02:00;True|2022-04-21T07:18:08.0875628+02:00;True|2022-04-21T07:13:51.1851446+02:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=tcp:push17.database.windows.net,1433%3bInitial Catalog=push17db%3bPersist Security Info=False%3bUser ID=push17admin%3bPassword=DotNet123+%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

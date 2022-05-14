@@ -1,0 +1,14 @@
+C:\Users\BUGGER\Desktop\REPO\e-commerce\bulkey.Models\bin\Release\net6.0\bulkey.Models.deps.json
+C:\Users\BUGGER\Desktop\REPO\e-commerce\bulkey.Models\bin\Release\net6.0\bulkey.Models.runtimeconfig.json
+C:\Users\BUGGER\Desktop\REPO\e-commerce\bulkey.Models\bin\Release\net6.0\bulkey.Models.dll
+C:\Users\BUGGER\Desktop\REPO\e-commerce\bulkey.Models\bin\Release\net6.0\bulkey.Models.pdb
+C:\Users\BUGGER\Desktop\REPO\e-commerce\bulkey.Models\obj\Release\net6.0\bulkey.Models.csproj.AssemblyReference.cache
+C:\Users\BUGGER\Desktop\REPO\e-commerce\bulkey.Models\obj\Release\net6.0\bulkey.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BUGGER\Desktop\REPO\e-commerce\bulkey.Models\obj\Release\net6.0\bulkey.Models.AssemblyInfoInputs.cache
+C:\Users\BUGGER\Desktop\REPO\e-commerce\bulkey.Models\obj\Release\net6.0\bulkey.Models.AssemblyInfo.cs
+C:\Users\BUGGER\Desktop\REPO\e-commerce\bulkey.Models\obj\Release\net6.0\bulkey.Models.csproj.CoreCompileInputs.cache
+C:\Users\BUGGER\Desktop\REPO\e-commerce\bulkey.Models\obj\Release\net6.0\bulkey.Models.dll
+C:\Users\BUGGER\Desktop\REPO\e-commerce\bulkey.Models\obj\Release\net6.0\refint\bulkey.Models.dll
+C:\Users\BUGGER\Desktop\REPO\e-commerce\bulkey.Models\obj\Release\net6.0\bulkey.Models.pdb
+C:\Users\BUGGER\Desktop\REPO\e-commerce\bulkey.Models\obj\Release\net6.0\bulkey.Models.genruntimeconfig.cache
+C:\Users\BUGGER\Desktop\REPO\e-commerce\bulkey.Models\obj\Release\net6.0\ref\bulkey.Models.dll

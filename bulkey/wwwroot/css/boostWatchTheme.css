@@ -1,4 +1,4 @@
-﻿/*!
+﻿/*!"Cabin Sketch", cursive
  * Bootswatch v5.1.3
  * Homepage: https://bootswatch.com
  * Copyright 2012-2021 Thomas Park
@@ -59,7 +59,7 @@
     --bs-font-sans-serif: Neucha, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-family: Arial, Tahoma;
     --bs-body-font-size: 1rem;
     --bs-body-font-weight: 700;
     --bs-body-line-height: 1.5;
@@ -107,7 +107,7 @@ hr {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;
-    font-family: "Cabin Sketch", cursive;
+    font-family: Arial, Tahoma;
     font-weight: 500;
     line-height: 1.2;
 }
@@ -311,6 +311,8 @@ figure {
 img,
 svg {
     vertical-align: middle;
+    height : 300px;
+    width : 200 px;
 }
 
 table {
@@ -2342,7 +2344,7 @@ progress {
 .col-form-label-lg {
     padding-top: calc(0.5rem + 2px);
     padding-bottom: calc(0.5rem + 2px);
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .col-form-label-sm {
@@ -2359,13 +2361,12 @@ progress {
 
 .form-control {
     display: block;
-    width: 100%;
+    width: 70%;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.5;
     color: #212529;
-    background-color: #fff;
     background-clip: padding-box;
     border: 2px solid #333;
     -webkit-appearance: none;
@@ -2390,11 +2391,7 @@ progress {
     }
 
 .form-control:focus {
-    color: #212529;
-    background-color: #fff;
-    border-color: #333;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(51, 51, 51, 0.25);
 }
 
 .form-control::-webkit-date-and-time-value {
@@ -3273,12 +3270,11 @@ textarea.form-control-lg {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: transparent;
     border: 2px solid transparent;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     border-radius: 25px;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+   
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3460,42 +3456,17 @@ fieldset:disabled .btn {
 
 .btn-warning {
     color: #fff;
-    background-color: #ffc107;
-    border-color: #ffc107;
+    background-color: #fff;
+    border-color: #333;
 }
 
     .btn-warning:hover {
         color: #fff;
         background-color: #d9a406;
-        border-color: #cc9a06;
+        border-color: #fff;
     }
 
-    .btn-check:focus + .btn-warning, .btn-warning:focus {
-        color: #fff;
-        background-color: #d9a406;
-        border-color: #cc9a06;
-        box-shadow: 0 0 0 0.25rem rgba(255, 202, 44, 0.5);
-    }
 
-    .btn-check:checked + .btn-warning,
-    .btn-check:active + .btn-warning, .btn-warning:active, .btn-warning.active,
-    .show > .btn-warning.dropdown-toggle {
-        color: #fff;
-        background-color: #cc9a06;
-        border-color: #bf9105;
-    }
-
-        .btn-check:checked + .btn-warning:focus,
-        .btn-check:active + .btn-warning:focus, .btn-warning:active:focus, .btn-warning.active:focus,
-        .show > .btn-warning.dropdown-toggle:focus {
-            box-shadow: 0 0 0 0.25rem rgba(255, 202, 44, 0.5);
-        }
-
-    .btn-warning:disabled, .btn-warning.disabled {
-        color: #fff;
-        background-color: #ffc107;
-        border-color: #ffc107;
-    }
 
 .btn-danger {
     color: #fff;
@@ -3872,7 +3843,7 @@ fieldset:disabled .btn {
 
 .btn-link {
     font-weight: 400;
-    color: #333;
+    color: #fff;
     text-decoration: underline;
 }
 
@@ -4429,11 +4400,7 @@ fieldset:disabled .btn {
     color: #292929;
 }
 
-.nav-link.disabled {
-    color: #868e96;
-    pointer-events: none;
-    cursor: default;
-}
+
 
 .nav-tabs {
     border-bottom: 2px solid #333;
@@ -4452,11 +4419,7 @@ fieldset:disabled .btn {
             isolation: isolate;
         }
 
-        .nav-tabs .nav-link.disabled {
-            color: #868e96;
-            background-color: transparent;
-            border-color: transparent;
-        }
+
 
         .nav-tabs .nav-link.active,
         .nav-tabs .nav-item.show .nav-link {
@@ -5217,7 +5180,7 @@ fieldset:disabled .btn {
 }
 
     .card-header:first-child {
-        border-radius: 23px 23px 0 0;
+        
     }
 
 .card-footer {
@@ -5227,7 +5190,7 @@ fieldset:disabled .btn {
 }
 
     .card-footer:last-child {
-        border-radius: 0 0 23px 23px;
+        
     }
 
 .card-header-tabs {
@@ -5249,25 +5212,20 @@ fieldset:disabled .btn {
     bottom: 0;
     left: 0;
     padding: 1rem;
-    border-radius: 23px;
+    height: 450px;
 }
 
 .card-img,
 .card-img-top,
 .card-img-bottom {
     width: 100%;
+    height: 450px;
 }
 
 .card-img,
 .card-img-top {
     border-top-left-radius: 23px;
     border-top-right-radius: 23px;
-}
-
-.card-img,
-.card-img-bottom {
-    border-bottom-right-radius: 23px;
-    border-bottom-left-radius: 23px;
 }
 
 .card-group > .card {
@@ -7405,7 +7363,7 @@ fieldset:disabled .btn {
 }
 
     .link-warning:hover, .link-warning:focus {
-        color: #cc9a06;
+        color: #fff;
     }
 
 .link-danger {
@@ -8565,6 +8523,7 @@ fieldset:disabled .btn {
 
 .pb-3 {
     padding-bottom: 1rem !important;
+    padding-top: 1rem !important;
 }
 
 .pb-4 {
@@ -12529,13 +12488,9 @@ fieldset:disabled .btn {
 }
 
 .navbar {
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 25px 25px 55px 5px/5px 55px 25px 25px;
 }
 
     .navbar.bg-light {
-        border-color: #333;
     }
 
     .navbar.fixed-top {
@@ -12549,13 +12504,12 @@ fieldset:disabled .btn {
     }
 
 .navbar-brand {
-    font-family: "Cabin Sketch", cursive;
+    font-family: Arial, Tahoma;
     font-weight: 400;
     text-decoration: none;
 }
 
 .btn {
-    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
     text-decoration: none;
 }
 
@@ -12564,7 +12518,6 @@ fieldset:disabled .btn {
 }
 
 .btn-sm, .btn-group-sm > .btn {
-    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
 }
 
 .btn-check {
@@ -12643,7 +12596,6 @@ table td {
 input,
 .form-control,
 .input-group-text {
-    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
 }
 
 textarea,
@@ -12795,7 +12747,6 @@ select.form-control {
     }
 
 .nav-pills .nav-link {
-    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
 }
 
 .nav-link,
@@ -12806,12 +12757,11 @@ select.form-control {
 }
 
 .nav-tabs .nav-link {
-    border-radius: 45px 15px 225px 5px/25px 225px 25px 255px;
+    
 }
 
 .breadcrumb {
     border: 2px solid #333;
-    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
 }
 
 .pagination .page-link {
@@ -12819,7 +12769,6 @@ select.form-control {
 }
 
 .badge {
-    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
 }
 
 .badge-pill {
@@ -12831,7 +12780,6 @@ select.form-control {
 }
 
 .alert {
-    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
 }
 
     .alert .btn-close::before {
@@ -12840,11 +12788,9 @@ select.form-control {
 
 .progress {
     border: 2px solid #333;
-    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
 }
 
 .card {
-    border-radius: 5px 5px 5px 5px/25px 25px 25px 5px;
 }
 
 .card-outline-primary, .card-outline-success, .card-outline-info, .card-outline-warning, .card-outline-danger {
@@ -12857,7 +12803,6 @@ select.form-control {
 }
 
     .card-header:first-child {
-        border-radius: 3px 3px 0 0/23px 23px 0 0;
     }
 
 .card-footer {
@@ -12869,7 +12814,7 @@ select.form-control {
 }
 
 .toast-header {
-    font-family: "Cabin Sketch", cursive;
+    font-family: Arial, Tahoma;
 }
 
 .modal-content {
@@ -12902,7 +12847,6 @@ select.form-control {
 }
 
 .tooltip-inner {
-    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
 }
 
 pre {
@@ -12922,5 +12866,4 @@ pre {
     }
 
 .img-thumbnail {
-    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
 }
